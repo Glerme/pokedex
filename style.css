@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #2222;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace; 
+  margin-bottom: 15px;
+}
+
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+
+
+#pkm-container{
+  margin: 30px auto;
+  background-color: #f2f2f2;
+  width: 600px;border: 1px solid rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.pesquisa{
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container-pesquisa{
+  background-color: #f1f1f1;
+}
+
+.container-pesquisa input{
+  width: 250px;
+  height: 30px;
+  border-radius: 6px 0 0 6px;
+  border: 2px solid black;
+  padding: 4px;
+}
+
+.container-pesquisa a{
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 0 6px 6px 0;
+}
+
+.pkm h3{
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pkm span{
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #666666;
+}
+
+.tipos {
+  display: flex;
+}
+
+.tipos p {
+  border: 1px solid red;
+  margin: 10px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.container-habilidades{
+  border: 1px solid red;
+}
+
+.divisao{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.divisao div{
+  margin-left: 10px;
+}
