@@ -1,3 +1,5 @@
+@import './type-colors.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -75,7 +77,10 @@ p{
 }
 
 .tipos p {
-  border: 1px solid red;
+  border: 1px solid var(--grama);
+  background-color: var(--grama);
+  color: #000;
+  padding: 10px;
   margin: 10px;
   width: 100%;
   border-radius: 8px;
@@ -83,7 +88,7 @@ p{
 }
 
 .container-habilidades{
-  border: 1px solid red;
+  
 }
 
 .divisao{
@@ -93,4 +98,5 @@ p{
 
 .divisao div{
   margin-left: 10px;
+  padding: 10px;
 }
