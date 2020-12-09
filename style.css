@@ -87,10 +87,6 @@ p{
   text-align: center;
 }
 
-.container-habilidades{
-  
-}
-
 .divisao{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -99,4 +95,29 @@ p{
 .divisao div{
   margin-left: 10px;
   padding: 10px;
+}
+
+.imagens{
+  display: flex;
+  justify-content: center;
+}
+
+#normal{
+  width: 256px;
+  height: 256px;
+}
+
+
+#normal::after{
+  content: "Forma Normal";
+}
+
+#shiny{
+  width: 256px;
+  height: 256px;
+}
+
+
+#shiny::after{
+  content: "Forma Shiny";
 }
