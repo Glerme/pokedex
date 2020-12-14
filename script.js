@@ -1,13 +1,16 @@
 const pkmContainer = document.querySelector("pkm-container");
 const input = document.getElementById("pesquisa");
-const btnPesquisar = document.getElementById("buscar");
+const btnPesquisar = document.querySelector("button#buscar ");
 const pkm = document.getElementById("pkm");
-const eventos = ['click', 'touchstart','submit']
+const eventos = ["click", "keydown"];
 
 async function procurarPoke(nomePok) {
   try {
-   return await fetch(`https://pokeapi.co/api/v2/pokemon/${nomePok}`)
-      .then((response) => {return response.json()});
+    return await fetch(`https://pokeapi.co/api/v2/pokemon/${nomePok}`).then(
+      (response) => {
+        return response.json();
+      }
+    );
   } catch (error) {
     console.error();
   }
@@ -60,6 +63,15 @@ function criarHtml(pokemon) {
        <span>Speed:</span>
        <p>${pokemon.stats[5].base_stat}</p>
      </div>
+     <div>
+       <span>Height:</span>
+       <p>${pokemon.weight  / 10}kg</p>
+     </div>
+     <div>
+       <span>Weight:</span>
+       <p>${pokemon.height  / 10}m</p>
+     </div>
+     
      
    </div>
    
@@ -74,8 +86,8 @@ function criarHtml(pokemon) {
 function tipo2(pokemon) {
   if (pokemon.types[1]) {
     return pokemon.types[1].type.name.toUpperCase();
-  } else{
-    return " - "
+  } else {
+    return " - ";
   }
 }
 
@@ -83,12 +95,17 @@ function startApp(pokemon) {
   pkm.innerHTML = criarHtml(pokemon);
 }
 
-
-eventos.forEach(evento => btnPesquisar.addEventListener(evento, buscar))
-
 function buscar(event) {
-  event.preventDefault();
   const nomePok = input.value.toLowerCase();
-  procurarPoke(nomePok).then(pokemon => {startApp(pokemon)})
-  
+  procurarPoke(nomePok).then((pokemon) => {
+    startApp(pokemon) 
+  });
 }
+
+function procurar(e) {
+  if (e.target == btnPesquisar || e.keyCode == 13) {
+    e.preventDefault();
+    buscar(e);
+  }
+}
+document.addEventListener("click", procurar);
