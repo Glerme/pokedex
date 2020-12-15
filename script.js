@@ -27,10 +27,10 @@ function criarHtml(pokemon) {
  <h3>${pokemon.name.toUpperCase()}</h3>
  <span id="numpkm">${"#" + pokemon.id}</span>
  <div class="tipos">
-   <p id="tipo1">${pokemon.types[0].type.name.toUpperCase()}</p>
-   <p id="tipo2">${tipo2(pokemon)}</p>
-   
- 
+ <p class="tipo1 ${pokemon.types[0].type.name}">${
+    pokemon.types[0].type.name.toUpperCase()
+  }</p>
+  <p class="tipo2 ${tipo2(pokemon)}">${tipo2(pokemon).toUpperCase()}</p>
  </div>
  
  <div class="container-habilidades">
@@ -65,11 +65,11 @@ function criarHtml(pokemon) {
      </div>
      <div>
        <span>Height:</span>
-       <p>${pokemon.weight  / 10}kg</p>
+       <p>${pokemon.weight / 10}kg</p>
      </div>
      <div>
        <span>Weight:</span>
-       <p>${pokemon.height  / 10}m</p>
+       <p>${pokemon.height / 10}m</p>
      </div>
      
      
@@ -85,7 +85,7 @@ function criarHtml(pokemon) {
 
 function tipo2(pokemon) {
   if (pokemon.types[1]) {
-    return pokemon.types[1].type.name.toUpperCase();
+    return pokemon.types[1].type.name;
   } else {
     return " - ";
   }
@@ -95,10 +95,11 @@ function startApp(pokemon) {
   pkm.innerHTML = criarHtml(pokemon);
 }
 
-function buscar(event) {
+function buscar(e) {
   const nomePok = input.value.toLowerCase();
   procurarPoke(nomePok).then((pokemon) => {
-    startApp(pokemon) 
+    startApp(pokemon);
+    console.log(pokemon);
   });
 }
 
