@@ -1,0 +1,23 @@
+.tipos {
+  display: flex;
+}
+
+.tipo1 {
+  color: #000;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tipo2 {
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}

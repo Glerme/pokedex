@@ -1,0 +1,15 @@
+.imagens {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #normal {
+    width: 256px;
+    height: 256px;
+  }
+  
+  #shiny {
+    width: 256px;
+    height: 256px;
+  }
