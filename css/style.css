@@ -25,6 +25,20 @@ p {
   font-size: 1.5rem;
 }
 
+.erro{
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
 :root {
   --inseto: #729f3f;
   --dragao: #29a7a7;
@@ -89,6 +103,7 @@ p {
 .dark {
   background-color: var(--noturno);
   border: 1px solid var(--noturno);
+  color: white;
 }
 
 .electric {
