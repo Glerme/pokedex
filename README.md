@@ -17,7 +17,7 @@
 </p>
 
 <h1 align="center">
-  <img alt="Print tela inicial" title="telaInicial" src="https://github.com/Glerme/Bot_Bauru_Empregos/blob/main/Assets/printTela.png" />
+  <img alt="Print tela inicial" title="telaInicial" src="https://github.com/Glerme/pokedex/blob/main/Assets/tela.png" />
 </h1>
 <br />
 <hr>
